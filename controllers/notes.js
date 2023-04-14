@@ -13,6 +13,12 @@ function index(req, res) {
   })
 }
 
+function newNote(req, res) {
+  res.render('notes/new')
+}
+
+
 export {
   index,
+  newNote as new,
 }
