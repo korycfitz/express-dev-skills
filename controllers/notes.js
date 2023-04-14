@@ -17,8 +17,22 @@ function newNote(req, res) {
   res.render('notes/new')
 }
 
+function create(req, res) {
+  console.log(req.body)
+  req.body.finished = false
+  Note.create(req.body)
+  .then(note => {
+    res.redirect('/notes')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/notes')
+  })
+}
+
 
 export {
   index,
   newNote as new,
+  create,
 }
