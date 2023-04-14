@@ -10,5 +10,5 @@ const noteSchema = new Schema({
 const Note = mongoose.model('Note', noteSchema)
 
 export {
-  Note
+  Note,
 }

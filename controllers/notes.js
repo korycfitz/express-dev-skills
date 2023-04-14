@@ -1,8 +1,15 @@
-import { notes } from '../data/note-data.js'
+import { Note } from '../models/note.js'
 
 function index(req, res) {
-  res.render('notes/index', {
-    notes:notes
+  Note.find({})
+  .then(notes => {
+    res.render('notes/index', {
+      notes:notes,
+    })
+  })
+  .catch(error => { // If there's an error, console.log it and redirect back home!
+    console.log(error)
+    res.redirect('/')
   })
 }
 
