@@ -20,7 +20,7 @@ function newNote(req, res) {
 
 function create(req, res) {
   // console.log(req.body)
-  req.body.finished = false
+  req.body.studied = false
   Note.create(req.body)
   .then(note => {
     res.redirect('/notes')

@@ -8,5 +8,5 @@ router.get('/', notesCtrl.index)
 router.get('/new', notesCtrl.new)
 router.get('/:noteId', notesCtrl.show)
 router.post('/', notesCtrl.create)
-
+router.delete('/:todoId', todosCtrl.delete)
 export { router }
