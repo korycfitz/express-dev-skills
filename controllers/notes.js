@@ -18,7 +18,7 @@ function newNote(req, res) {
 }
 
 function create(req, res) {
-  console.log(req.body)
+  // console.log(req.body)
   req.body.finished = false
   Note.create(req.body)
   .then(note => {
@@ -30,9 +30,22 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Note.findById(req.params.noteId)
+  .then(note => {
+    res.render('notes/show', {
+      note:note
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/notes')
+  })
+}
 
 export {
   index,
   newNote as new,
   create,
+  show,
 }
