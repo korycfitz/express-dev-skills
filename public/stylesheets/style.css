@@ -4,9 +4,8 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #182070;
 }
-
 .delete-note {
   display: inline-block;
   margin-right: 10px;
@@ -18,4 +17,8 @@ a {
 	
 li {
   list-style: none;
+}
+
+body {
+  background-color: lightcoral;
 }
