@@ -1,13 +1,9 @@
 import { Router } from 'express'
 
-import { notes } from '../data/note-data.js'
+import * as notesCtrl from '../controllers/notes.js'
 const router = Router()
 
 // GET localhost:3000/users
-router.get('/', function(req, res) {
-  res.render('notes/index', {
-    notes:notes
-  })
-})
+router.get('/', notesCtrl.index)
 
 export { router }
