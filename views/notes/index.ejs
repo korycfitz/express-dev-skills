@@ -13,7 +13,7 @@
     <% notes.forEach(note => { %>
       <li>
         <form 
-        action="/notes/<%= todo._id %>?_method=DELETE"
+        action="/notes/<%= note._id %>?_method=DELETE"
         class="delete-note"
         method="POST"
       >
@@ -21,7 +21,7 @@
       </form>
         <a href="/notes/<%= note._id %>"><%= note.text %></a>
         -
-        <%= note.studied ?  'Studied' : 'Need to Study!' %>
+        <%= note.studied ? 'Studied' : 'Need to Study!' %>
       </li>
     <% }) %>
   </ul>

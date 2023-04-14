@@ -43,10 +43,21 @@ function show(req, res) {
     res.redirect('/notes')
   })
 }
+function deleteNote(req, res) {
+  Note.findByIdAndDelete(req.params.noteId)
+  .then(note => {
+    res.redirect('/notes')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/notes')
+  })
+}
 
 export {
   index,
   newNote as new,
   create,
   show,
+  deleteNote as delete
 }
