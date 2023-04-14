@@ -5,6 +5,7 @@ function index(req, res) {
   .then(notes => {
     res.render('notes/index', {
       notes:notes,
+      time:req.time
     })
   })
   .catch(error => { // If there's an error, console.log it and redirect back home!
