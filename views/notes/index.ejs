@@ -11,7 +11,7 @@
   <ul>
     <% notes.forEach(note => { %>
       <li>
-        <%= note.text %>
+        <a href="/notes/<%= note._id %>"><%= note.text %></a>
         -
         <%= note.studied ?  'Studied' : 'Need to Study!' %>
       </li>
