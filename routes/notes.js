@@ -9,4 +9,4 @@ router.get('/new', notesCtrl.new)
 router.get('/:noteId', notesCtrl.show)
 router.post('/', notesCtrl.create)
 
-export { router }
+export { router } 
