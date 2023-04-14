@@ -6,3 +6,9 @@ const noteSchema = new Schema({
   text: String,
   studied: Boolean
 })
+
+const Note = mongoose.model('Note', noteSchema)
+
+export {
+  Note
+}
