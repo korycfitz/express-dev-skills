@@ -5,6 +5,8 @@ import { fileURLToPath } from 'url'
 import createError from 'http-errors'
 import logger from 'morgan'
 import "dotenv/config.js"
+import "./config/database.js"
+
 // import routers
 import { router as indexRouter } from './routes/index.js'
 import { router as notesRouter } from './routes/notes.js'
